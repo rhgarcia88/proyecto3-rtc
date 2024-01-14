@@ -9,4 +9,3 @@ export const generateHeader = () => {
 <h1></h1>`}
 
 
-{/* <div class="user-div"> <img src="./assets/user.png" alt="user"></div> */}

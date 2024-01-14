@@ -46,11 +46,15 @@ createCard(30).then(cards => {
           <img class="image-in-card" src="${imageUrl}">
         </div>`;
       });
-
-      h1.innerText = `Mostrando imágenes de: ${searchText}`;
+      if(cards===''){
+        h1.innerText = `No hay resultados para "${searchText}"`;
+      }else{
+        h1.innerText = `Mostrando imágenes de: ${searchText}`;
+      }
+console.log(cards);
+      searchKeyword = searchText;
       h1.style.display = "block";
 
-      searchKeyword = searchText;
 
       const cardsContainer = document.querySelector(".cards-container");
       cardsContainer.innerHTML = cards;
